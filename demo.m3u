@@ -1,0 +1,22 @@
+#EXTM3U
+#EXTINF:-1 tvg-country="HR" group-title="GENERAL",HRT 1 HD (1080p)
+https://example.com/index1.mpd
+
+#EXTINF:-1 tvg-country="HR" group-title="GENERAL",HRT 2 HD (1080p)
+https://example.com/index2.mpd
+
+#EXTINF:-1 tvg-country="HR" group-title="GENERAL",HRT 3 HD (720p)
+https://example.com/index3.mpd
+
+#EXTINF:-1 tvg-country="HR" group-title="GENERAL",RTL
+https://example.com/rtlstream.m3u
+
+#EXTINF:-1 tvg-country="HR" group-title="KIDS",RTL KOCKICA
+https://example.com/rtlkockica
+
+#EXTINF:-1 tvg-country="UK" group-title="SPORT",SKY SPORTS F1 UHD
+https://example.com/123456
+
+#EXTINF:-1 tvg-country="UK" group-title="SPORT",SKY SPORTS MAIN EVENT UHD
+https://example.com:8080/live/@ABC123/456789.ts
+

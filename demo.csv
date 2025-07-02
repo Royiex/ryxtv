@@ -1,0 +1,14 @@
+# Format
+# (NAME);(CATEGORY);(COUNTRY);(IPTVLINK)
+# they can have all have spaces
+
+HRT 1 HD (1080p);GENERAL;HR;https://example.com/index1.mpd
+HRT 2 HD (1080p);GENERAL;HR;https://example.com/index2.mpd
+HRT 3 HD (720p);GENERAL;HR;https://example.com/index3.mpd
+
+RTL;GENERAL;HR;https://example.com/rtlstream.m3u
+RTL KOCKICA;KIDS;HR;https://example.com/rtlkockica
+
+
+SKY SPORTS F1 UHD;SPORT;UK;https://example.com/123456
+SKY SPORTS MAIN EVENT UHD;SPORT;UK;https://example.com:8080/live/@ABC123/456789.ts
