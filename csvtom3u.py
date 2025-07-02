@@ -5,7 +5,7 @@ import sys
 file = sys.argv[1]
 file = open(file)
 lines = file.readlines()
-file.close
+file.close()
 
 file = sys.argv[1].split('.')[0]
 file = open(f"{file}.m3u", "x")
