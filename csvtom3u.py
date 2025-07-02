@@ -3,29 +3,21 @@
 import sys
 
 file = sys.argv[1]
-file = open(file)
-lines = file.readlines()
-file.close()
-
-file = sys.argv[1].split('.')[0]
-file = open(f"{file}.m3u", "x")
+with open(file) as f:
+    lines = f.readlines()
 
 prefix = "#EXTINF:-1 "
 tvgc = "tvg-country="
 tvgg = "group-title="
 channels = ""
 
-file.write(f"#EXTM3U\n")
 
 for line in lines:
     if len(line)<10 or line[0]=='#':
         continue
     parts = line.split(';')
 
-    name = parts[0]
-    group= parts[1]
-    lang = parts[2]
-    link = parts[3]
+    name, group, lang, link, *_ = parts
 
     oline = prefix
     oline+=f'{tvgc}"{lang}" '
@@ -34,5 +26,7 @@ for line in lines:
 
     channels+=f"{oline}\n{link}\n"
 
-file.write(channels)
-file.close()
+file = sys.argv[1].split('.')[0]
+with open(f"{file}.m3u", "x") as f:
+    f.write(f"#EXTM3U\n")
+    f.write(channels)

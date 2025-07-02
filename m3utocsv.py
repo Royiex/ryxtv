@@ -3,16 +3,11 @@
 import sys, re
 
 file = sys.argv[1]
-file = open(file)
-lines = file.readlines()
-file.close()
+with open(file) as f:
+    lines = f.readlines()
 
 urlnext = False
 channels = []
-
-file = sys.argv[1].split('.')[0]
-file = open(f"{file}.csv", "x")
-
 
 
 for line in lines:
@@ -33,6 +28,7 @@ for line in lines:
         url = line.split('|')[0]
         channels.append([name, group, country, url])
 
-for channel in channels:
-    file.write(f"{channel[0]};{channel[1]};{channel[2]};{channel[3]}\n")
-file.close()
+file = sys.argv[1].split('.')[0]
+with open(f"{file}.csv", "x") as f:
+    for channel in channels:
+        f.write(f"{channel[0]};{channel[1]};{channel[2]};{channel[3]}\n")
